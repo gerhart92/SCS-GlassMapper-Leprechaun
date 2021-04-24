@@ -3,9 +3,123 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{E9676517-E2B9-4819-BC8C-D35015DDCA13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{874A5463-52A3-49FD-8C5D-1732459E8468}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{D5674477-5D4F-4084-956A-0A39E2FD2F9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Navigation", "Navigation", "{1170CF0B-3A0D-496A-87F6-DC3C54B0D2A0}"
+	ProjectSection(SolutionItems) = preProject
+		src\Feature\Navigation\Sitecore.Feature.Navigation.module.json = src\Feature\Navigation\Sitecore.Feature.Navigation.module.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PageContent", "PageContent", "{974082B8-5A30-421A-A3E8-7EDA8A8DA83E}"
+	ProjectSection(SolutionItems) = preProject
+		src\Feature\PageContent\Sitecore.Feature.PageContent.module.json = src\Feature\PageContent\Sitecore.Feature.PageContent.module.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Media", "Media", "{FF5C6B11-7FD5-4DF3-854F-1C0B4F0DFED1}"
+	ProjectSection(SolutionItems) = preProject
+		src\Feature\Media\Sitecore.Feature.Media.module.json = src\Feature\Media\Sitecore.Feature.Media.module.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Design", "Design", "{D7D48B61-3B26-445F-B055-17545DEA2AC9}"
+	ProjectSection(SolutionItems) = preProject
+		src\Foundation\Design\Sitecore.Foundation.Design.module.json = src\Foundation\Design\Sitecore.Foundation.Design.module.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Indexing", "Indexing", "{2142A99C-908D-4354-981E-016C20DF3DE8}"
+	ProjectSection(SolutionItems) = preProject
+		src\Foundation\Indexing\Sitecore.Foundation.Indexing.module.json = src\Foundation\Indexing\Sitecore.Foundation.Indexing.module.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{B99BC742-4E56-4048-A593-89D632544360}"
+	ProjectSection(SolutionItems) = preProject
+		src\Project\Test\Sitecore.Project.Test.module.json = src\Project\Test\Sitecore.Project.Test.module.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Feature.Navigation", "src\Feature\Navigation\code\Sitecore.Feature.Navigation.csproj", "{EEDA31E9-58A3-448A-A3FC-F519ED051503}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Feature.Media", "src\Feature\Media\code\Sitecore.Feature.Media.csproj", "{470AFFEA-991E-40F4-ADD7-EE3AE5AB84ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Feature.PageContent", "src\Feature\PageContent\code\Sitecore.Feature.PageContent.csproj", "{25653F4F-BAEC-4679-9560-E98F7C3B8741}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Foundation.Design", "src\Foundation\Design\code\Sitecore.Foundation.Design.csproj", "{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Foundation.Indexing", "src\Foundation\Indexing\code\Sitecore.Foundation.Indexing.csproj", "{47E69770-530D-42A0-B322-CF5CDA03B091}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ORM", "ORM", "{2181CD95-D86F-4595-A7D0-9882E5D9E9F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E427D978-ED40-4876-A643-D1B16E536917}"
+	ProjectSection(SolutionItems) = preProject
+		Leprechaun.config = Leprechaun.config
+		sitecore.json = sitecore.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TemplateGenerator", "TemplateGenerator", "{76C7D2B6-B9A5-4573-A647-3152E41EDBAD}"
+	ProjectSection(SolutionItems) = preProject
+		TemplateGenerator\GlassMapper.csx = TemplateGenerator\GlassMapper.csx
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Project.Test", "src\Project\Test\code\Sitecore.Project.Test.csproj", "{339842A1-D1F5-4C29-9A2A-71974661C3A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Foundation.ORM", "src\Foundation\ORM\code\Sitecore.Foundation.ORM.csproj", "{5D6577C0-B7A2-45B2-8299-13D6348E5E21}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEDA31E9-58A3-448A-A3FC-F519ED051503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEDA31E9-58A3-448A-A3FC-F519ED051503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEDA31E9-58A3-448A-A3FC-F519ED051503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEDA31E9-58A3-448A-A3FC-F519ED051503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{470AFFEA-991E-40F4-ADD7-EE3AE5AB84ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{470AFFEA-991E-40F4-ADD7-EE3AE5AB84ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{470AFFEA-991E-40F4-ADD7-EE3AE5AB84ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{470AFFEA-991E-40F4-ADD7-EE3AE5AB84ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25653F4F-BAEC-4679-9560-E98F7C3B8741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25653F4F-BAEC-4679-9560-E98F7C3B8741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25653F4F-BAEC-4679-9560-E98F7C3B8741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25653F4F-BAEC-4679-9560-E98F7C3B8741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47E69770-530D-42A0-B322-CF5CDA03B091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E69770-530D-42A0-B322-CF5CDA03B091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E69770-530D-42A0-B322-CF5CDA03B091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E69770-530D-42A0-B322-CF5CDA03B091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{339842A1-D1F5-4C29-9A2A-71974661C3A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{339842A1-D1F5-4C29-9A2A-71974661C3A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{339842A1-D1F5-4C29-9A2A-71974661C3A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{339842A1-D1F5-4C29-9A2A-71974661C3A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D6577C0-B7A2-45B2-8299-13D6348E5E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D6577C0-B7A2-45B2-8299-13D6348E5E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D6577C0-B7A2-45B2-8299-13D6348E5E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D6577C0-B7A2-45B2-8299-13D6348E5E21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1170CF0B-3A0D-496A-87F6-DC3C54B0D2A0} = {E9676517-E2B9-4819-BC8C-D35015DDCA13}
+		{974082B8-5A30-421A-A3E8-7EDA8A8DA83E} = {E9676517-E2B9-4819-BC8C-D35015DDCA13}
+		{FF5C6B11-7FD5-4DF3-854F-1C0B4F0DFED1} = {E9676517-E2B9-4819-BC8C-D35015DDCA13}
+		{D7D48B61-3B26-445F-B055-17545DEA2AC9} = {874A5463-52A3-49FD-8C5D-1732459E8468}
+		{2142A99C-908D-4354-981E-016C20DF3DE8} = {874A5463-52A3-49FD-8C5D-1732459E8468}
+		{B99BC742-4E56-4048-A593-89D632544360} = {D5674477-5D4F-4084-956A-0A39E2FD2F9C}
+		{EEDA31E9-58A3-448A-A3FC-F519ED051503} = {1170CF0B-3A0D-496A-87F6-DC3C54B0D2A0}
+		{470AFFEA-991E-40F4-ADD7-EE3AE5AB84ED} = {FF5C6B11-7FD5-4DF3-854F-1C0B4F0DFED1}
+		{25653F4F-BAEC-4679-9560-E98F7C3B8741} = {974082B8-5A30-421A-A3E8-7EDA8A8DA83E}
+		{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08} = {D7D48B61-3B26-445F-B055-17545DEA2AC9}
+		{47E69770-530D-42A0-B322-CF5CDA03B091} = {2142A99C-908D-4354-981E-016C20DF3DE8}
+		{2181CD95-D86F-4595-A7D0-9882E5D9E9F5} = {874A5463-52A3-49FD-8C5D-1732459E8468}
+		{76C7D2B6-B9A5-4573-A647-3152E41EDBAD} = {E427D978-ED40-4876-A643-D1B16E536917}
+		{339842A1-D1F5-4C29-9A2A-71974661C3A1} = {B99BC742-4E56-4048-A593-89D632544360}
+		{5D6577C0-B7A2-45B2-8299-13D6348E5E21} = {2181CD95-D86F-4595-A7D0-9882E5D9E9F5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6822019A-56D3-4695-9B9E-96F9D10ECD75}

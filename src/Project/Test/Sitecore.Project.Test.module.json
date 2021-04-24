@@ -1,0 +1,26 @@
+{
+	"namespace": "Sitecore.Project.Test",
+	"items": {
+	   "includes": [
+			{
+				"name" : "master/sitecore/templates/Project",
+				"path" : "/sitecore/templates/Project/Test",
+				"scope": "ItemAndDescendants",
+				"allowedPushOperations": "CreateUpdateAndDelete"			
+				
+			},
+			{
+				"name" : "master/sitecore/layout/Renderings/Project/Test",
+				"path" : "/sitecore/layout/Renderings/Project/Test",
+				"scope": "ItemAndDescendants",
+				"allowedPushOperations": "createUpdateAndDelete"
+			}
+		]
+	},
+	"leprechaun": {
+		"configuration": {
+		  "@extends": "Sitecore.Foundation.Models",
+		  "@name": "Sitecore.Project.Test"
+		}
+	}
+}

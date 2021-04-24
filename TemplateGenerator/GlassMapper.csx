@@ -24,7 +24,7 @@ using Glass.Mapper.Sc.Configuration;
 using Glass.Mapper.Sc.Fields;
 using Sitecore.Globalization;
 using Sitecore.Data;
-using Test.Foundation.Models.Models.BaseModels;
+using Sitecore.Foundation.ORM.Models;
 
 {RenderTemplates()}
 ");
