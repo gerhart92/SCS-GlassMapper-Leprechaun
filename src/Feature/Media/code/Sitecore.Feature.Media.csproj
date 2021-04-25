@@ -24,6 +24,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
+	<RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -84,6 +85,7 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\MediaGlassBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -91,9 +93,12 @@
       <Project>{4238d5c5-afd2-4df5-bf3d-adb9d46adc08}</Project>
       <Name>Sitecore.Foundation.Design</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\ORM\code\Sitecore.Foundation.ORM.csproj">
+      <Project>{5d6577c0-b7a2-45b2-8299-13d6348e5e21}</Project>
+      <Name>Sitecore.Foundation.ORM</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Views\Media\" />
   </ItemGroup>
   <PropertyGroup>

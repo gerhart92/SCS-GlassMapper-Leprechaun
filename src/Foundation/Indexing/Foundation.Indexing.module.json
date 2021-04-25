@@ -1,0 +1,20 @@
+{
+	"namespace": "Sitecore.Foundation.Indexing",
+	"items": {
+	   "includes": [
+			{
+				"name" : "master/sitecore/templates/Foundation",
+				"path" : "/sitecore/templates/Foundation/Indexing",
+				"scope": "ItemAndDescendants",
+				"allowedPushOperations": "CreateUpdateAndDelete"			
+				
+			}
+		]
+	},
+	"leprechaun": {
+        "configuration": {
+            "@extends": "Sitecore.Foundation.ORM",
+            "@name": "Foundation.Indexing"
+        }
+	}
+}

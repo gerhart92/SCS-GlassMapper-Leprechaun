@@ -92,6 +92,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\TestGlassBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -102,9 +103,15 @@
   <ItemGroup>
     <Folder Include="Views\Website\Sublayouts\" />
   </ItemGroup>
-  <!-- <PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\ORM\code\Sitecore.Foundation.ORM.csproj">
+      <Project>{5d6577c0-b7a2-45b2-8299-13d6348e5e21}</Project>
+      <Name>Sitecore.Foundation.ORM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
     <PreBuildEvent>dotnet leprechaun /c $(SolutionDir)\Leprechaun.config</PreBuildEvent>
-  </PropertyGroup>-->
+  </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

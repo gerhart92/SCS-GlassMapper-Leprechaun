@@ -1,0 +1,26 @@
+{
+	"namespace": "Sitecore.Feature.Navigation",
+	"items": {
+	   "includes": [
+			{
+				"name" : "master/sitecore/templates/Feature",
+				"path" : "/sitecore/templates/Feature/Navigation",
+				"scope": "ItemAndDescendants",
+				"allowedPushOperations": "CreateUpdateAndDelete"			
+				
+			},
+			{
+				"name" : "master/sitecore/layout/Renderings/Feature",
+				"path" : "/sitecore/layout/Renderings/Feature/Navigation",
+				"scope": "ItemAndDescendants",
+				"allowedPushOperations": "createUpdateAndDelete"
+			}
+		]
+	},
+	"leprechaun": {
+        "configuration": {
+            "@extends": "Sitecore.Foundation.ORM",
+            "@name": "Feature.Navigation"
+        }
+	}
+}

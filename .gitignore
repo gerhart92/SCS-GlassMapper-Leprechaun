@@ -245,3 +245,4 @@ npm-debug.log
 .DS_Store
 
 /BuildConfiguration.csproj
+*.scindex

@@ -1,0 +1,26 @@
+{
+	"namespace": "Sitecore.Feature.PageContent",
+	"items": {
+	   "includes": [
+			{
+				"name" : "master/sitecore/templates/Feature",
+				"path" : "/sitecore/templates/Feature/PageContent",
+				"scope": "ItemAndDescendants",
+				"allowedPushOperations": "CreateUpdateAndDelete"			
+				
+			},
+			{
+				"name" : "master/sitecore/layout/Renderings/Feature",
+				"path" : "/sitecore/layout/Renderings/Feature/PageContent",
+				"scope": "ItemAndDescendants",
+				"allowedPushOperations": "createUpdateAndDelete"
+			}
+		]
+	},
+	"leprechaun": {
+        "configuration": {
+            "@extends": "Sitecore.Foundation.ORM",
+            "@name": "Feature.PageContent"
+        }
+	}
+}
