@@ -37,7 +37,7 @@ namespace {template.Namespace}
 {{");
         break;
     }
-        
+
     foreach (var template in Templates)
     {
         localCode.AppendLine($@"
@@ -126,8 +126,8 @@ public string RenderInterfaceFields(TemplateCodeGenerationMetadata template)
 		/// <para>ID: {field.Id}</para>	
         /// <para>Section: {field.Section}</para>
 		/// </summary>
-        [SitecoreField(FieldName = I{template.CodeName}Constants.{field.CodeName}_FieldName)]
-        {GetFieldType(field)} {field.CodeName} {{ get; set; }}");
+        [SitecoreField(I{template.CodeName}Constants.{field.CodeName}_FieldId, SitecoreFieldType.{GetGlassMapperFieldType(field)}, ""{field.Section}"")]
+        { GetFieldType(field)} {field.CodeName} {{ get; set; }}");
     }
 
     return localCode.ToString();
@@ -144,7 +144,7 @@ public string RenderClassFields(TemplateCodeGenerationMetadata template)
 		/// <para>Path: {field.Path}</para>	
 		/// <para>ID: {field.Id}</para>	
 		/// </summary>
-        [SitecoreField(FieldName = I{template.CodeName}Constants.{field.CodeName}_FieldName)]
+        [SitecoreField(I{template.CodeName}Constants.{field.CodeName}_FieldId, SitecoreFieldType.{GetGlassMapperFieldType(field)}, ""{field.Section}"")]
         public virtual {GetFieldType(field)} {field.CodeName} {{ get; set; }}");
     }
 
@@ -218,6 +218,66 @@ public string GetFieldType(TemplateFieldCodeGenerationMetadata field)
     }
 }
 
+public string GetGlassMapperFieldType(TemplateFieldCodeGenerationMetadata field)
+{
+    switch (field.Type.ToLower())
+    {
+        case "tristate":
+        case "checkbox":
+            return "Checkbox";
+        case "date":
+            return "Date";
+        case "datetime":
+            return "DateTime";
+        case "number":
+            return "Number";
+        case "integer":
+            return "Integer";
+        case "treelist":
+            return "Treelist";
+        case "treelistex":
+            return "TreelistEx";
+        case "treelist descriptive":
+        case "checklist":
+            return "Checklist";
+        case "multilist":
+            return "Multilist";
+        case "grouped droplink":
+            return "GroupedDroplink";
+        case "droplink":
+            return "Droplink";
+        case "lookup":
+        case "droptree":
+            return "DropTree";
+        case "reference":
+        case "tree":
+        case "file":
+            return "File";
+        case "image":
+            return "Image";
+        case "rich text":
+            return "RichText";
+        case "html":
+        case "link":
+        case "general link":
+            return "GeneralLink";
+        case "single-line text":
+            return "SingleLineText";
+        case "multi-line text":
+            return "MultiLineText";
+        case "frame":
+        case "text":
+        case "memo":
+        case "droplist":
+            return "Droplist";
+        case "grouped droplist":
+            return "GroupedDroplist";
+        case "valuelookup":
+        default:
+            return "Custom";
+    }
+}
+
 // Generates Glass Constants File
 
 public string RenderConstantFields(TemplateCodeGenerationMetadata template)
@@ -232,7 +292,8 @@ public string RenderConstantFields(TemplateCodeGenerationMetadata template)
     foreach (var field in template.OwnFields)
     {
         localCode.Append($@"
-        public static readonly ID {field.CodeName}_FieldId = new ID(""{field.Id}"");
+        public static readonly ID {field.CodeName} = new ID(""{field.Id}"");
+        public const string {field.CodeName}_FieldId = ""{field.Id}"";
         public const string {field.CodeName}_FieldName = ""{field.Name}"";");
     }
 

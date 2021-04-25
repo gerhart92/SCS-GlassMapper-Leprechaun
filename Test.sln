@@ -60,6 +60,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TemplateGenerator", "TemplateGenerator", "{76C7D2B6-B9A5-4573-A647-3152E41EDBAD}"
 	ProjectSection(SolutionItems) = preProject
 		TemplateGenerator\GlassMapper.csx = TemplateGenerator\GlassMapper.csx
+		TemplateGenerator\GlassMapperById.csx = TemplateGenerator\GlassMapperById.csx
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Project.Test", "src\Project\Test\code\Sitecore.Project.Test.csproj", "{339842A1-D1F5-4C29-9A2A-71974661C3A1}"
