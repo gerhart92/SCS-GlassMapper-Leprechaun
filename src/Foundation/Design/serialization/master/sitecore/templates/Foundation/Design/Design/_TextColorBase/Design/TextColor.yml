@@ -4,9 +4,6 @@ Parent: "3fa31194-802f-4d29-beeb-233f68bbbd3a"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Foundation/Design/_TextColorBase/Design/TextColor
 SharedFields:
-- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
-  Hint: Source
-  Value: /sitecore/system/Settings/Foundation/Design/Colors
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
   Value: Droplink
@@ -15,10 +12,6 @@ SharedFields:
   Value: 207
 Languages:
 - Language: en
-  Fields:
-  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
-    Hint: Title
-    Value: Text Color
   Versions:
   - Version: 1
     Fields:
@@ -35,11 +28,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "71f2b10e-c28a-4829-ac7f-de41dd6dccd4"
+      Value: "69bacf6c-22e6-459d-bcb8-2beea506627e"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210425T000214Z
+      Value: 20210424T204200Z

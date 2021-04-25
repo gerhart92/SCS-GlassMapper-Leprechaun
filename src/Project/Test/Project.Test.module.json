@@ -1,26 +1,37 @@
 {
-	"namespace": "Sitecore.Project.Test",
-	"items": {
-	   "includes": [
-			{
-				"name" : "master/sitecore/templates/Project",
-				"path" : "/sitecore/templates/Project/Test",
-				"scope": "ItemAndDescendants",
-				"allowedPushOperations": "CreateUpdateAndDelete"			
-				
-			},
-			{
-				"name" : "master/sitecore/layout/Renderings/Project",
-				"path" : "/sitecore/layout/Renderings/Project/Test",
-				"scope": "ItemAndDescendants",
-				"allowedPushOperations": "createUpdateAndDelete"
-			}
-		]
-	},
-	"leprechaun": {
+    "namespace": "Sitecore.Project.Test",
+    "items": {
+        "includes": [
+            {
+                "name": "master/sitecore/templates/Project",
+                "path": "/sitecore/templates/Project",
+                "scope": "SingleItem",
+                "allowedPushOperations": "CreateOnly"
+            },
+            {
+                "name": "master/sitecore/layout/Renderings/Project",
+                "path": "/sitecore/layout/Renderings/Project",
+                "scope": "SingleItem",
+                "allowedPushOperations": "CreateOnly"
+            },
+            {
+                "name": "master/sitecore/templates/Project/Test",
+                "path": "/sitecore/templates/Project/Test",
+                "scope": "ItemAndDescendants",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "master/sitecore/layout/Renderings/Project/Test",
+                "path": "/sitecore/layout/Renderings/Project/Test",
+                "scope": "ItemAndDescendants",
+                "allowedPushOperations": "createUpdateAndDelete"
+            }
+        ]
+    },
+    "leprechaun": {
         "configuration": {
             "@extends": "Sitecore.Foundation.ORM",
             "@name": "Project.Test"
         }
-	}
+    }
 }

@@ -3,14 +3,26 @@
 	"items": {
 	   "includes": [
 			{
-				"name" : "master/sitecore/templates/Feature",
+                "name": "master/sitecore/templates/Feature",
+                "path": "/sitecore/templates/Feature",
+                "scope": "SingleItem",
+                "allowedPushOperations": "CreateOnly"
+            },
+            {
+                "name": "master/sitecore/layout/Renderings/Feature",
+                "path": "/sitecore/layout/Renderings/Feature",
+                "scope": "SingleItem",
+                "allowedPushOperations": "CreateOnly"
+            },
+			{
+				"name" : "master/sitecore/templates/Feature/Media",
 				"path" : "/sitecore/templates/Feature/Media",
 				"scope": "ItemAndDescendants",
 				"allowedPushOperations": "CreateUpdateAndDelete"			
 				
 			},
 			{
-				"name" : "master/sitecore/layout/Renderings/Feature",
+				"name" : "master/sitecore/layout/Renderings/Feature/Media",
 				"path" : "/sitecore/layout/Renderings/Feature/Media",
 				"scope": "ItemAndDescendants",
 				"allowedPushOperations": "createUpdateAndDelete"

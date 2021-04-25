@@ -2,8 +2,20 @@
     "namespace": "Sitecore.Foundation.Design",
     "items": {
         "includes": [
-            {
+			{
                 "name": "master/sitecore/templates/Foundation",
+                "path": "/sitecore/templates/Foundation",
+                "scope": "SingleItem",
+                "allowedPushOperations": "CreateOnly"
+            },
+            {
+                "name": "master/sitecore/layout/Renderings/Foundation",
+                "path": "/sitecore/layout/Renderings/Foundation",
+                "scope": "SingleItem",
+                "allowedPushOperations": "CreateOnly"
+            },
+            {
+                "name": "master/sitecore/templates/Foundation/Design",
                 "path": "/sitecore/templates/Foundation/Design",
                 "scope": "ItemAndDescendants",
                 "allowedPushOperations": "CreateUpdateAndDelete"

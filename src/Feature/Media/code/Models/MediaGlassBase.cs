@@ -38,7 +38,7 @@ namespace Sitecore.Feature.Media.Models
 		/// <para>ID: 22025177-9559-476a-ab5c-c50aa4c8bc45</para>	
         /// <para>Section: Image</para>
 		/// </summary>
-        [SitecoreField(IImageComponentConstants.Image_FieldId, SitecoreFieldType.Image, "Image")]
+        [SitecoreField(FieldName = IImageComponentConstants.Image_FieldName)]
         Image Image { get; set; }
 	}
 	
@@ -48,8 +48,7 @@ namespace Sitecore.Feature.Media.Models
 		public static readonly ID TemplateId = new ID(TemplateIdString);
 		public const string TemplateName = "ImageComponent";
 		
-        public static readonly ID Image = new ID("22025177-9559-476a-ab5c-c50aa4c8bc45");
-        public const string Image_FieldId = "22025177-9559-476a-ab5c-c50aa4c8bc45";
+        public static readonly ID Image_FieldId = new ID("22025177-9559-476a-ab5c-c50aa4c8bc45");
         public const string Image_FieldName = "Image";
 	}
 	
@@ -65,7 +64,7 @@ namespace Sitecore.Feature.Media.Models
 		/// <para>Path: /sitecore/templates/Feature/Media/_ImageComponent/Image/Image</para>	
 		/// <para>ID: 22025177-9559-476a-ab5c-c50aa4c8bc45</para>	
 		/// </summary>
-        [SitecoreField(IImageComponentConstants.Image_FieldId, SitecoreFieldType.Image, "Image")]
+        [SitecoreField(FieldName = IImageComponentConstants.Image_FieldName)]
         public virtual Image Image { get; set; }
 	}
 
@@ -84,7 +83,7 @@ namespace Sitecore.Feature.Media.Models
 		/// <para>ID: 8be40dd8-089e-4c05-8526-99f1d56f24a8</para>	
         /// <para>Section: Video</para>
 		/// </summary>
-        [SitecoreField(IVideoComponentConstants.VideoUrl_FieldId, SitecoreFieldType.SingleLineText, "Video")]
+        [SitecoreField(FieldName = IVideoComponentConstants.VideoUrl_FieldName)]
         string VideoUrl { get; set; }
 	}
 	
@@ -94,8 +93,7 @@ namespace Sitecore.Feature.Media.Models
 		public static readonly ID TemplateId = new ID(TemplateIdString);
 		public const string TemplateName = "VideoComponent";
 		
-        public static readonly ID VideoUrl = new ID("8be40dd8-089e-4c05-8526-99f1d56f24a8");
-        public const string VideoUrl_FieldId = "8be40dd8-089e-4c05-8526-99f1d56f24a8";
+        public static readonly ID VideoUrl_FieldId = new ID("8be40dd8-089e-4c05-8526-99f1d56f24a8");
         public const string VideoUrl_FieldName = "Video Url";
 	}
 	
@@ -111,7 +109,7 @@ namespace Sitecore.Feature.Media.Models
 		/// <para>Path: /sitecore/templates/Feature/Media/_VideoComponent/Video/Video Url</para>	
 		/// <para>ID: 8be40dd8-089e-4c05-8526-99f1d56f24a8</para>	
 		/// </summary>
-        [SitecoreField(IVideoComponentConstants.VideoUrl_FieldId, SitecoreFieldType.SingleLineText, "Video")]
+        [SitecoreField(FieldName = IVideoComponentConstants.VideoUrl_FieldName)]
         public virtual string VideoUrl { get; set; }
 	}
 
