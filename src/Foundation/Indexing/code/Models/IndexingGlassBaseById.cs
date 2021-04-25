@@ -38,35 +38,35 @@ namespace Sitecore.Foundation.Indexing.Models
 		/// <para>ID: 03637705-7272-4c47-bc45-2b395a87a0c2</para>	
         /// <para>Section: Page</para>
 		/// </summary>
-        [SitecoreField(FieldName = IIndexablePageConstants.Body_FieldName)]
+        [SitecoreField(IIndexablePageConstants.Body_FieldId, SitecoreFieldType.RichText, "Page")]
         string Body { get; set; }/// <summary>
 		/// Represents Heading field
 		/// <para>Field Type: Single-Line Text</para>	
 		/// <para>ID: 23e30ff6-6776-467c-b7df-d13e47a5edf2</para>	
         /// <para>Section: Page</para>
 		/// </summary>
-        [SitecoreField(FieldName = IIndexablePageConstants.Heading_FieldName)]
+        [SitecoreField(IIndexablePageConstants.Heading_FieldId, SitecoreFieldType.SingleLineText, "Page")]
         string Heading { get; set; }/// <summary>
 		/// Represents Image field
 		/// <para>Field Type: Image</para>	
 		/// <para>ID: 77d43aba-e013-47db-bc1c-cd3b10f02969</para>	
         /// <para>Section: Page</para>
 		/// </summary>
-        [SitecoreField(FieldName = IIndexablePageConstants.Image_FieldName)]
+        [SitecoreField(IIndexablePageConstants.Image_FieldId, SitecoreFieldType.Image, "Page")]
         Image Image { get; set; }/// <summary>
 		/// Represents Include in Search field
 		/// <para>Field Type: Checkbox</para>	
 		/// <para>ID: f4d06554-21e3-439b-83b6-b12adbfa46ee</para>	
         /// <para>Section: Search</para>
 		/// </summary>
-        [SitecoreField(FieldName = IIndexablePageConstants.IncludeInSearch_FieldName)]
+        [SitecoreField(IIndexablePageConstants.IncludeInSearch_FieldId, SitecoreFieldType.Checkbox, "Search")]
         bool IncludeInSearch { get; set; }/// <summary>
 		/// Represents Summary field
 		/// <para>Field Type: Multi-Line Text</para>	
 		/// <para>ID: d4399d1c-7ed6-4f86-88ce-7f8aa32d0aea</para>	
         /// <para>Section: Page</para>
 		/// </summary>
-        [SitecoreField(FieldName = IIndexablePageConstants.Summary_FieldName)]
+        [SitecoreField(IIndexablePageConstants.Summary_FieldId, SitecoreFieldType.MultiLineText, "Page")]
         string Summary { get; set; }
 	}
 	
@@ -76,15 +76,20 @@ namespace Sitecore.Foundation.Indexing.Models
 		public static readonly ID TemplateId = new ID(TemplateIdString);
 		public const string TemplateName = "IndexablePage";
 		
-        public static readonly ID Body_FieldId = new ID("03637705-7272-4c47-bc45-2b395a87a0c2");
+        public static readonly ID Body = new ID("03637705-7272-4c47-bc45-2b395a87a0c2");
+        public const string Body_FieldId = "03637705-7272-4c47-bc45-2b395a87a0c2";
         public const string Body_FieldName = "Body";
-        public static readonly ID Heading_FieldId = new ID("23e30ff6-6776-467c-b7df-d13e47a5edf2");
+        public static readonly ID Heading = new ID("23e30ff6-6776-467c-b7df-d13e47a5edf2");
+        public const string Heading_FieldId = "23e30ff6-6776-467c-b7df-d13e47a5edf2";
         public const string Heading_FieldName = "Heading";
-        public static readonly ID Image_FieldId = new ID("77d43aba-e013-47db-bc1c-cd3b10f02969");
+        public static readonly ID Image = new ID("77d43aba-e013-47db-bc1c-cd3b10f02969");
+        public const string Image_FieldId = "77d43aba-e013-47db-bc1c-cd3b10f02969";
         public const string Image_FieldName = "Image";
-        public static readonly ID IncludeInSearch_FieldId = new ID("f4d06554-21e3-439b-83b6-b12adbfa46ee");
+        public static readonly ID IncludeInSearch = new ID("f4d06554-21e3-439b-83b6-b12adbfa46ee");
+        public const string IncludeInSearch_FieldId = "f4d06554-21e3-439b-83b6-b12adbfa46ee";
         public const string IncludeInSearch_FieldName = "Include in Search";
-        public static readonly ID Summary_FieldId = new ID("d4399d1c-7ed6-4f86-88ce-7f8aa32d0aea");
+        public static readonly ID Summary = new ID("d4399d1c-7ed6-4f86-88ce-7f8aa32d0aea");
+        public const string Summary_FieldId = "d4399d1c-7ed6-4f86-88ce-7f8aa32d0aea";
         public const string Summary_FieldName = "Summary";
 	}
 	
@@ -100,31 +105,31 @@ namespace Sitecore.Foundation.Indexing.Models
 		/// <para>Path: /sitecore/templates/Foundation/Indexing/_IndexablePage/Page/Body</para>	
 		/// <para>ID: 03637705-7272-4c47-bc45-2b395a87a0c2</para>	
 		/// </summary>
-        [SitecoreField(FieldName = IIndexablePageConstants.Body_FieldName)]
+        [SitecoreField(IIndexablePageConstants.Body_FieldId, SitecoreFieldType.RichText, "Page")]
         public virtual string Body { get; set; }/// <summary>
 		/// Represents Heading field
 		/// <para>Path: /sitecore/templates/Foundation/Indexing/_IndexablePage/Page/Heading</para>	
 		/// <para>ID: 23e30ff6-6776-467c-b7df-d13e47a5edf2</para>	
 		/// </summary>
-        [SitecoreField(FieldName = IIndexablePageConstants.Heading_FieldName)]
+        [SitecoreField(IIndexablePageConstants.Heading_FieldId, SitecoreFieldType.SingleLineText, "Page")]
         public virtual string Heading { get; set; }/// <summary>
 		/// Represents Image field
 		/// <para>Path: /sitecore/templates/Foundation/Indexing/_IndexablePage/Page/Image</para>	
 		/// <para>ID: 77d43aba-e013-47db-bc1c-cd3b10f02969</para>	
 		/// </summary>
-        [SitecoreField(FieldName = IIndexablePageConstants.Image_FieldName)]
+        [SitecoreField(IIndexablePageConstants.Image_FieldId, SitecoreFieldType.Image, "Page")]
         public virtual Image Image { get; set; }/// <summary>
 		/// Represents Include in Search field
 		/// <para>Path: /sitecore/templates/Foundation/Indexing/_IndexablePage/Search/Include in Search</para>	
 		/// <para>ID: f4d06554-21e3-439b-83b6-b12adbfa46ee</para>	
 		/// </summary>
-        [SitecoreField(FieldName = IIndexablePageConstants.IncludeInSearch_FieldName)]
+        [SitecoreField(IIndexablePageConstants.IncludeInSearch_FieldId, SitecoreFieldType.Checkbox, "Search")]
         public virtual bool IncludeInSearch { get; set; }/// <summary>
 		/// Represents Summary field
 		/// <para>Path: /sitecore/templates/Foundation/Indexing/_IndexablePage/Page/Summary</para>	
 		/// <para>ID: d4399d1c-7ed6-4f86-88ce-7f8aa32d0aea</para>	
 		/// </summary>
-        [SitecoreField(FieldName = IIndexablePageConstants.Summary_FieldName)]
+        [SitecoreField(IIndexablePageConstants.Summary_FieldId, SitecoreFieldType.MultiLineText, "Page")]
         public virtual string Summary { get; set; }
 	}
 

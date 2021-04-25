@@ -38,7 +38,7 @@ namespace Sitecore.Foundation.Design.Models
 		/// <para>ID: 95bf480c-79dd-42d6-a290-4d7e1a637945</para>	
         /// <para>Section: Lookup</para>
 		/// </summary>
-        [SitecoreField(FieldName = IDesignLookupValueConstants.Value_FieldName)]
+        [SitecoreField(IDesignLookupValueConstants.Value_FieldId, SitecoreFieldType.SingleLineText, "Lookup")]
         string Value { get; set; }
 	}
 	
@@ -48,7 +48,8 @@ namespace Sitecore.Foundation.Design.Models
 		public static readonly ID TemplateId = new ID(TemplateIdString);
 		public const string TemplateName = "DesignLookupValue";
 		
-        public static readonly ID Value_FieldId = new ID("95bf480c-79dd-42d6-a290-4d7e1a637945");
+        public static readonly ID Value = new ID("95bf480c-79dd-42d6-a290-4d7e1a637945");
+        public const string Value_FieldId = "95bf480c-79dd-42d6-a290-4d7e1a637945";
         public const string Value_FieldName = "Value";
 	}
 	
@@ -64,7 +65,7 @@ namespace Sitecore.Foundation.Design.Models
 		/// <para>Path: /sitecore/templates/Foundation/Design/DesignLookupValue/Lookup/Value</para>	
 		/// <para>ID: 95bf480c-79dd-42d6-a290-4d7e1a637945</para>	
 		/// </summary>
-        [SitecoreField(FieldName = IDesignLookupValueConstants.Value_FieldName)]
+        [SitecoreField(IDesignLookupValueConstants.Value_FieldId, SitecoreFieldType.SingleLineText, "Lookup")]
         public virtual string Value { get; set; }
 	}
 
@@ -83,7 +84,7 @@ namespace Sitecore.Foundation.Design.Models
 		/// <para>ID: ca232b43-2e39-443d-8f1c-41a07e8d1740</para>	
         /// <para>Section: Design</para>
 		/// </summary>
-        [SitecoreField(FieldName = IBackgroundColorBaseConstants.BackgroundColor_FieldName)]
+        [SitecoreField(IBackgroundColorBaseConstants.BackgroundColor_FieldId, SitecoreFieldType.Droplink, "Design")]
         Guid BackgroundColor { get; set; }
 	}
 	
@@ -93,7 +94,8 @@ namespace Sitecore.Foundation.Design.Models
 		public static readonly ID TemplateId = new ID(TemplateIdString);
 		public const string TemplateName = "BackgroundColorBase";
 		
-        public static readonly ID BackgroundColor_FieldId = new ID("ca232b43-2e39-443d-8f1c-41a07e8d1740");
+        public static readonly ID BackgroundColor = new ID("ca232b43-2e39-443d-8f1c-41a07e8d1740");
+        public const string BackgroundColor_FieldId = "ca232b43-2e39-443d-8f1c-41a07e8d1740";
         public const string BackgroundColor_FieldName = "BackgroundColor";
 	}
 	
@@ -109,7 +111,7 @@ namespace Sitecore.Foundation.Design.Models
 		/// <para>Path: /sitecore/templates/Foundation/Design/_BackgroundColorBase/Design/BackgroundColor</para>	
 		/// <para>ID: ca232b43-2e39-443d-8f1c-41a07e8d1740</para>	
 		/// </summary>
-        [SitecoreField(FieldName = IBackgroundColorBaseConstants.BackgroundColor_FieldName)]
+        [SitecoreField(IBackgroundColorBaseConstants.BackgroundColor_FieldId, SitecoreFieldType.Droplink, "Design")]
         public virtual Guid BackgroundColor { get; set; }
 	}
 
@@ -128,14 +130,14 @@ namespace Sitecore.Foundation.Design.Models
 		/// <para>ID: cba77125-22c5-4c26-a896-141c44a7c93b</para>	
         /// <para>Section: CTA</para>
 		/// </summary>
-        [SitecoreField(FieldName = ICtabaseConstants.Ctacolor_FieldName)]
+        [SitecoreField(ICtabaseConstants.Ctacolor_FieldId, SitecoreFieldType.Droplink, "CTA")]
         Guid Ctacolor { get; set; }/// <summary>
 		/// Represents CTATextColor field
 		/// <para>Field Type: Droplink</para>	
 		/// <para>ID: a01b69b4-91e5-4678-a8f1-9ec4552e2d80</para>	
         /// <para>Section: CTA</para>
 		/// </summary>
-        [SitecoreField(FieldName = ICtabaseConstants.CtatextColor_FieldName)]
+        [SitecoreField(ICtabaseConstants.CtatextColor_FieldId, SitecoreFieldType.Droplink, "CTA")]
         Guid CtatextColor { get; set; }
 	}
 	
@@ -145,9 +147,11 @@ namespace Sitecore.Foundation.Design.Models
 		public static readonly ID TemplateId = new ID(TemplateIdString);
 		public const string TemplateName = "Ctabase";
 		
-        public static readonly ID Ctacolor_FieldId = new ID("cba77125-22c5-4c26-a896-141c44a7c93b");
+        public static readonly ID Ctacolor = new ID("cba77125-22c5-4c26-a896-141c44a7c93b");
+        public const string Ctacolor_FieldId = "cba77125-22c5-4c26-a896-141c44a7c93b";
         public const string Ctacolor_FieldName = "CTAColor";
-        public static readonly ID CtatextColor_FieldId = new ID("a01b69b4-91e5-4678-a8f1-9ec4552e2d80");
+        public static readonly ID CtatextColor = new ID("a01b69b4-91e5-4678-a8f1-9ec4552e2d80");
+        public const string CtatextColor_FieldId = "a01b69b4-91e5-4678-a8f1-9ec4552e2d80";
         public const string CtatextColor_FieldName = "CTATextColor";
 	}
 	
@@ -163,13 +167,13 @@ namespace Sitecore.Foundation.Design.Models
 		/// <para>Path: /sitecore/templates/Foundation/Design/_CTABase/CTA/CTAColor</para>	
 		/// <para>ID: cba77125-22c5-4c26-a896-141c44a7c93b</para>	
 		/// </summary>
-        [SitecoreField(FieldName = ICtabaseConstants.Ctacolor_FieldName)]
+        [SitecoreField(ICtabaseConstants.Ctacolor_FieldId, SitecoreFieldType.Droplink, "CTA")]
         public virtual Guid Ctacolor { get; set; }/// <summary>
 		/// Represents CTATextColor field
 		/// <para>Path: /sitecore/templates/Foundation/Design/_CTABase/CTA/CTATextColor</para>	
 		/// <para>ID: a01b69b4-91e5-4678-a8f1-9ec4552e2d80</para>	
 		/// </summary>
-        [SitecoreField(FieldName = ICtabaseConstants.CtatextColor_FieldName)]
+        [SitecoreField(ICtabaseConstants.CtatextColor_FieldId, SitecoreFieldType.Droplink, "CTA")]
         public virtual Guid CtatextColor { get; set; }
 	}
 
@@ -188,7 +192,7 @@ namespace Sitecore.Foundation.Design.Models
 		/// <para>ID: da4d8777-a4d7-4eff-a755-05ccf304648b</para>	
         /// <para>Section: Design</para>
 		/// </summary>
-        [SitecoreField(FieldName = ITextAlignmentBaseConstants.TextAlignment_FieldName)]
+        [SitecoreField(ITextAlignmentBaseConstants.TextAlignment_FieldId, SitecoreFieldType.Droplink, "Design")]
         Guid TextAlignment { get; set; }
 	}
 	
@@ -198,7 +202,8 @@ namespace Sitecore.Foundation.Design.Models
 		public static readonly ID TemplateId = new ID(TemplateIdString);
 		public const string TemplateName = "TextAlignmentBase";
 		
-        public static readonly ID TextAlignment_FieldId = new ID("da4d8777-a4d7-4eff-a755-05ccf304648b");
+        public static readonly ID TextAlignment = new ID("da4d8777-a4d7-4eff-a755-05ccf304648b");
+        public const string TextAlignment_FieldId = "da4d8777-a4d7-4eff-a755-05ccf304648b";
         public const string TextAlignment_FieldName = "TextAlignment";
 	}
 	
@@ -214,7 +219,7 @@ namespace Sitecore.Foundation.Design.Models
 		/// <para>Path: /sitecore/templates/Foundation/Design/_TextAlignmentBase/Design/TextAlignment</para>	
 		/// <para>ID: da4d8777-a4d7-4eff-a755-05ccf304648b</para>	
 		/// </summary>
-        [SitecoreField(FieldName = ITextAlignmentBaseConstants.TextAlignment_FieldName)]
+        [SitecoreField(ITextAlignmentBaseConstants.TextAlignment_FieldId, SitecoreFieldType.Droplink, "Design")]
         public virtual Guid TextAlignment { get; set; }
 	}
 
@@ -233,7 +238,7 @@ namespace Sitecore.Foundation.Design.Models
 		/// <para>ID: 23cf19eb-e8ca-42a8-92a5-c04959f6bf0b</para>	
         /// <para>Section: Design</para>
 		/// </summary>
-        [SitecoreField(FieldName = ITextColorBaseConstants.TextColor_FieldName)]
+        [SitecoreField(ITextColorBaseConstants.TextColor_FieldId, SitecoreFieldType.Droplink, "Design")]
         Guid TextColor { get; set; }
 	}
 	
@@ -243,7 +248,8 @@ namespace Sitecore.Foundation.Design.Models
 		public static readonly ID TemplateId = new ID(TemplateIdString);
 		public const string TemplateName = "TextColorBase";
 		
-        public static readonly ID TextColor_FieldId = new ID("23cf19eb-e8ca-42a8-92a5-c04959f6bf0b");
+        public static readonly ID TextColor = new ID("23cf19eb-e8ca-42a8-92a5-c04959f6bf0b");
+        public const string TextColor_FieldId = "23cf19eb-e8ca-42a8-92a5-c04959f6bf0b";
         public const string TextColor_FieldName = "TextColor";
 	}
 	
@@ -259,7 +265,7 @@ namespace Sitecore.Foundation.Design.Models
 		/// <para>Path: /sitecore/templates/Foundation/Design/_TextColorBase/Design/TextColor</para>	
 		/// <para>ID: 23cf19eb-e8ca-42a8-92a5-c04959f6bf0b</para>	
 		/// </summary>
-        [SitecoreField(FieldName = ITextColorBaseConstants.TextColor_FieldName)]
+        [SitecoreField(ITextColorBaseConstants.TextColor_FieldId, SitecoreFieldType.Droplink, "Design")]
         public virtual Guid TextColor { get; set; }
 	}
 

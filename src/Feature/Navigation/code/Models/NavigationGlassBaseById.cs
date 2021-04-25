@@ -38,21 +38,21 @@ namespace Sitecore.Feature.Navigation.Models
 		/// <para>ID: a5903a32-7404-4ad6-ad1d-88272aada003</para>	
         /// <para>Section: Footer</para>
 		/// </summary>
-        [SitecoreField(FieldName = IFooterConstants.Copyright_FieldName)]
+        [SitecoreField(IFooterConstants.Copyright_FieldId, SitecoreFieldType.RichText, "Footer")]
         string Copyright { get; set; }/// <summary>
 		/// Represents PageLinks field
 		/// <para>Field Type: Treelist</para>	
 		/// <para>ID: 67bddcf2-d9d8-4f9e-b518-41f9daf392c9</para>	
         /// <para>Section: Footer</para>
 		/// </summary>
-        [SitecoreField(FieldName = IFooterConstants.PageLinks_FieldName)]
+        [SitecoreField(IFooterConstants.PageLinks_FieldId, SitecoreFieldType.Treelist, "Footer")]
         IEnumerable<Guid> PageLinks { get; set; }/// <summary>
 		/// Represents SocialIcons field
 		/// <para>Field Type: Treelist</para>	
 		/// <para>ID: c321ceee-b313-4bc3-a98a-a64c7752b40b</para>	
         /// <para>Section: Footer</para>
 		/// </summary>
-        [SitecoreField(FieldName = IFooterConstants.SocialIcons_FieldName)]
+        [SitecoreField(IFooterConstants.SocialIcons_FieldId, SitecoreFieldType.Treelist, "Footer")]
         IEnumerable<Guid> SocialIcons { get; set; }
 	}
 	
@@ -62,11 +62,14 @@ namespace Sitecore.Feature.Navigation.Models
 		public static readonly ID TemplateId = new ID(TemplateIdString);
 		public const string TemplateName = "Footer";
 		
-        public static readonly ID Copyright_FieldId = new ID("a5903a32-7404-4ad6-ad1d-88272aada003");
+        public static readonly ID Copyright = new ID("a5903a32-7404-4ad6-ad1d-88272aada003");
+        public const string Copyright_FieldId = "a5903a32-7404-4ad6-ad1d-88272aada003";
         public const string Copyright_FieldName = "Copyright";
-        public static readonly ID PageLinks_FieldId = new ID("67bddcf2-d9d8-4f9e-b518-41f9daf392c9");
+        public static readonly ID PageLinks = new ID("67bddcf2-d9d8-4f9e-b518-41f9daf392c9");
+        public const string PageLinks_FieldId = "67bddcf2-d9d8-4f9e-b518-41f9daf392c9";
         public const string PageLinks_FieldName = "PageLinks";
-        public static readonly ID SocialIcons_FieldId = new ID("c321ceee-b313-4bc3-a98a-a64c7752b40b");
+        public static readonly ID SocialIcons = new ID("c321ceee-b313-4bc3-a98a-a64c7752b40b");
+        public const string SocialIcons_FieldId = "c321ceee-b313-4bc3-a98a-a64c7752b40b";
         public const string SocialIcons_FieldName = "SocialIcons";
 	}
 	
@@ -82,19 +85,19 @@ namespace Sitecore.Feature.Navigation.Models
 		/// <para>Path: /sitecore/templates/Feature/Navigation/_Footer/Footer/Copyright</para>	
 		/// <para>ID: a5903a32-7404-4ad6-ad1d-88272aada003</para>	
 		/// </summary>
-        [SitecoreField(FieldName = IFooterConstants.Copyright_FieldName)]
+        [SitecoreField(IFooterConstants.Copyright_FieldId, SitecoreFieldType.RichText, "Footer")]
         public virtual string Copyright { get; set; }/// <summary>
 		/// Represents PageLinks field
 		/// <para>Path: /sitecore/templates/Feature/Navigation/_Footer/Footer/PageLinks</para>	
 		/// <para>ID: 67bddcf2-d9d8-4f9e-b518-41f9daf392c9</para>	
 		/// </summary>
-        [SitecoreField(FieldName = IFooterConstants.PageLinks_FieldName)]
+        [SitecoreField(IFooterConstants.PageLinks_FieldId, SitecoreFieldType.Treelist, "Footer")]
         public virtual IEnumerable<Guid> PageLinks { get; set; }/// <summary>
 		/// Represents SocialIcons field
 		/// <para>Path: /sitecore/templates/Feature/Navigation/_Footer/Footer/SocialIcons</para>	
 		/// <para>ID: c321ceee-b313-4bc3-a98a-a64c7752b40b</para>	
 		/// </summary>
-        [SitecoreField(FieldName = IFooterConstants.SocialIcons_FieldName)]
+        [SitecoreField(IFooterConstants.SocialIcons_FieldId, SitecoreFieldType.Treelist, "Footer")]
         public virtual IEnumerable<Guid> SocialIcons { get; set; }
 	}
 
@@ -113,14 +116,14 @@ namespace Sitecore.Feature.Navigation.Models
 		/// <para>ID: 1b0e769a-ff34-4825-b87e-508b6997c264</para>	
         /// <para>Section: Header</para>
 		/// </summary>
-        [SitecoreField(FieldName = IHeaderConstants.Logo_FieldName)]
+        [SitecoreField(IHeaderConstants.Logo_FieldId, SitecoreFieldType.Image, "Header")]
         Image Logo { get; set; }/// <summary>
 		/// Represents Pages field
 		/// <para>Field Type: Treelist</para>	
 		/// <para>ID: e4c7532a-3cb3-41ba-9885-a674e3d24d83</para>	
         /// <para>Section: Header</para>
 		/// </summary>
-        [SitecoreField(FieldName = IHeaderConstants.Pages_FieldName)]
+        [SitecoreField(IHeaderConstants.Pages_FieldId, SitecoreFieldType.Treelist, "Header")]
         IEnumerable<Guid> Pages { get; set; }
 	}
 	
@@ -130,9 +133,11 @@ namespace Sitecore.Feature.Navigation.Models
 		public static readonly ID TemplateId = new ID(TemplateIdString);
 		public const string TemplateName = "Header";
 		
-        public static readonly ID Logo_FieldId = new ID("1b0e769a-ff34-4825-b87e-508b6997c264");
+        public static readonly ID Logo = new ID("1b0e769a-ff34-4825-b87e-508b6997c264");
+        public const string Logo_FieldId = "1b0e769a-ff34-4825-b87e-508b6997c264";
         public const string Logo_FieldName = "Logo";
-        public static readonly ID Pages_FieldId = new ID("e4c7532a-3cb3-41ba-9885-a674e3d24d83");
+        public static readonly ID Pages = new ID("e4c7532a-3cb3-41ba-9885-a674e3d24d83");
+        public const string Pages_FieldId = "e4c7532a-3cb3-41ba-9885-a674e3d24d83";
         public const string Pages_FieldName = "Pages";
 	}
 	
@@ -148,13 +153,13 @@ namespace Sitecore.Feature.Navigation.Models
 		/// <para>Path: /sitecore/templates/Feature/Navigation/_Header/Header/Logo</para>	
 		/// <para>ID: 1b0e769a-ff34-4825-b87e-508b6997c264</para>	
 		/// </summary>
-        [SitecoreField(FieldName = IHeaderConstants.Logo_FieldName)]
+        [SitecoreField(IHeaderConstants.Logo_FieldId, SitecoreFieldType.Image, "Header")]
         public virtual Image Logo { get; set; }/// <summary>
 		/// Represents Pages field
 		/// <para>Path: /sitecore/templates/Feature/Navigation/_Header/Header/Pages</para>	
 		/// <para>ID: e4c7532a-3cb3-41ba-9885-a674e3d24d83</para>	
 		/// </summary>
-        [SitecoreField(FieldName = IHeaderConstants.Pages_FieldName)]
+        [SitecoreField(IHeaderConstants.Pages_FieldId, SitecoreFieldType.Treelist, "Header")]
         public virtual IEnumerable<Guid> Pages { get; set; }
 	}
 
@@ -173,21 +178,21 @@ namespace Sitecore.Feature.Navigation.Models
 		/// <para>ID: e87fbd04-1210-4739-952a-25685ba15938</para>	
         /// <para>Section: Navigation</para>
 		/// </summary>
-        [SitecoreField(FieldName = INavigablePageConstants.NavigationTitle_FieldName)]
+        [SitecoreField(INavigablePageConstants.NavigationTitle_FieldId, SitecoreFieldType.SingleLineText, "Navigation")]
         string NavigationTitle { get; set; }/// <summary>
 		/// Represents ShowInNavigation field
 		/// <para>Field Type: Checkbox</para>	
 		/// <para>ID: 10557651-153d-4334-8583-fb35b5f30023</para>	
         /// <para>Section: Navigation</para>
 		/// </summary>
-        [SitecoreField(FieldName = INavigablePageConstants.ShowInNavigation_FieldName)]
+        [SitecoreField(INavigablePageConstants.ShowInNavigation_FieldId, SitecoreFieldType.Checkbox, "Navigation")]
         bool ShowInNavigation { get; set; }/// <summary>
 		/// Represents Summary field
 		/// <para>Field Type: Multi-Line Text</para>	
 		/// <para>ID: b74bf1f6-9c48-4e02-9f39-7a2460dbd0fe</para>	
         /// <para>Section: Navigation</para>
 		/// </summary>
-        [SitecoreField(FieldName = INavigablePageConstants.Summary_FieldName)]
+        [SitecoreField(INavigablePageConstants.Summary_FieldId, SitecoreFieldType.MultiLineText, "Navigation")]
         string Summary { get; set; }
 	}
 	
@@ -197,11 +202,14 @@ namespace Sitecore.Feature.Navigation.Models
 		public static readonly ID TemplateId = new ID(TemplateIdString);
 		public const string TemplateName = "NavigablePage";
 		
-        public static readonly ID NavigationTitle_FieldId = new ID("e87fbd04-1210-4739-952a-25685ba15938");
+        public static readonly ID NavigationTitle = new ID("e87fbd04-1210-4739-952a-25685ba15938");
+        public const string NavigationTitle_FieldId = "e87fbd04-1210-4739-952a-25685ba15938";
         public const string NavigationTitle_FieldName = "Navigation Title";
-        public static readonly ID ShowInNavigation_FieldId = new ID("10557651-153d-4334-8583-fb35b5f30023");
+        public static readonly ID ShowInNavigation = new ID("10557651-153d-4334-8583-fb35b5f30023");
+        public const string ShowInNavigation_FieldId = "10557651-153d-4334-8583-fb35b5f30023";
         public const string ShowInNavigation_FieldName = "ShowInNavigation";
-        public static readonly ID Summary_FieldId = new ID("b74bf1f6-9c48-4e02-9f39-7a2460dbd0fe");
+        public static readonly ID Summary = new ID("b74bf1f6-9c48-4e02-9f39-7a2460dbd0fe");
+        public const string Summary_FieldId = "b74bf1f6-9c48-4e02-9f39-7a2460dbd0fe";
         public const string Summary_FieldName = "Summary";
 	}
 	
@@ -217,19 +225,19 @@ namespace Sitecore.Feature.Navigation.Models
 		/// <para>Path: /sitecore/templates/Feature/Navigation/_NavigablePage/Navigation/Navigation Title</para>	
 		/// <para>ID: e87fbd04-1210-4739-952a-25685ba15938</para>	
 		/// </summary>
-        [SitecoreField(FieldName = INavigablePageConstants.NavigationTitle_FieldName)]
+        [SitecoreField(INavigablePageConstants.NavigationTitle_FieldId, SitecoreFieldType.SingleLineText, "Navigation")]
         public virtual string NavigationTitle { get; set; }/// <summary>
 		/// Represents ShowInNavigation field
 		/// <para>Path: /sitecore/templates/Feature/Navigation/_NavigablePage/Navigation/ShowInNavigation</para>	
 		/// <para>ID: 10557651-153d-4334-8583-fb35b5f30023</para>	
 		/// </summary>
-        [SitecoreField(FieldName = INavigablePageConstants.ShowInNavigation_FieldName)]
+        [SitecoreField(INavigablePageConstants.ShowInNavigation_FieldId, SitecoreFieldType.Checkbox, "Navigation")]
         public virtual bool ShowInNavigation { get; set; }/// <summary>
 		/// Represents Summary field
 		/// <para>Path: /sitecore/templates/Feature/Navigation/_NavigablePage/Navigation/Summary</para>	
 		/// <para>ID: b74bf1f6-9c48-4e02-9f39-7a2460dbd0fe</para>	
 		/// </summary>
-        [SitecoreField(FieldName = INavigablePageConstants.Summary_FieldName)]
+        [SitecoreField(INavigablePageConstants.Summary_FieldId, SitecoreFieldType.MultiLineText, "Navigation")]
         public virtual string Summary { get; set; }
 	}
 

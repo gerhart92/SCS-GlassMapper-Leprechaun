@@ -38,21 +38,21 @@ namespace Sitecore.Feature.PageContent.Models
 		/// <para>ID: 4182c34c-f0c4-4407-ad4b-03dcd992a5ad</para>	
         /// <para>Section: Banner</para>
 		/// </summary>
-        [SitecoreField(FieldName = IHeroBannerConstants.Cta_FieldName)]
+        [SitecoreField(IHeroBannerConstants.Cta_FieldId, SitecoreFieldType.GeneralLink, "Banner")]
         Link Cta { get; set; }/// <summary>
 		/// Represents Summary field
 		/// <para>Field Type: Multi-Line Text</para>	
 		/// <para>ID: cc7f2327-2297-43e4-9859-9f643dad125a</para>	
         /// <para>Section: Banner</para>
 		/// </summary>
-        [SitecoreField(FieldName = IHeroBannerConstants.Summary_FieldName)]
+        [SitecoreField(IHeroBannerConstants.Summary_FieldId, SitecoreFieldType.MultiLineText, "Banner")]
         string Summary { get; set; }/// <summary>
 		/// Represents Title field
 		/// <para>Field Type: Single-Line Text</para>	
 		/// <para>ID: 4ce0eeb2-7177-4459-ba10-3b05e046c176</para>	
         /// <para>Section: Banner</para>
 		/// </summary>
-        [SitecoreField(FieldName = IHeroBannerConstants.Title_FieldName)]
+        [SitecoreField(IHeroBannerConstants.Title_FieldId, SitecoreFieldType.SingleLineText, "Banner")]
         string Title { get; set; }
 	}
 	
@@ -62,11 +62,14 @@ namespace Sitecore.Feature.PageContent.Models
 		public static readonly ID TemplateId = new ID(TemplateIdString);
 		public const string TemplateName = "HeroBanner";
 		
-        public static readonly ID Cta_FieldId = new ID("4182c34c-f0c4-4407-ad4b-03dcd992a5ad");
+        public static readonly ID Cta = new ID("4182c34c-f0c4-4407-ad4b-03dcd992a5ad");
+        public const string Cta_FieldId = "4182c34c-f0c4-4407-ad4b-03dcd992a5ad";
         public const string Cta_FieldName = "CTA";
-        public static readonly ID Summary_FieldId = new ID("cc7f2327-2297-43e4-9859-9f643dad125a");
+        public static readonly ID Summary = new ID("cc7f2327-2297-43e4-9859-9f643dad125a");
+        public const string Summary_FieldId = "cc7f2327-2297-43e4-9859-9f643dad125a";
         public const string Summary_FieldName = "Summary";
-        public static readonly ID Title_FieldId = new ID("4ce0eeb2-7177-4459-ba10-3b05e046c176");
+        public static readonly ID Title = new ID("4ce0eeb2-7177-4459-ba10-3b05e046c176");
+        public const string Title_FieldId = "4ce0eeb2-7177-4459-ba10-3b05e046c176";
         public const string Title_FieldName = "Title";
 	}
 	
@@ -82,19 +85,19 @@ namespace Sitecore.Feature.PageContent.Models
 		/// <para>Path: /sitecore/templates/Feature/PageContent/_HeroBanner/Banner/CTA</para>	
 		/// <para>ID: 4182c34c-f0c4-4407-ad4b-03dcd992a5ad</para>	
 		/// </summary>
-        [SitecoreField(FieldName = IHeroBannerConstants.Cta_FieldName)]
+        [SitecoreField(IHeroBannerConstants.Cta_FieldId, SitecoreFieldType.GeneralLink, "Banner")]
         public virtual Link Cta { get; set; }/// <summary>
 		/// Represents Summary field
 		/// <para>Path: /sitecore/templates/Feature/PageContent/_HeroBanner/Banner/Summary</para>	
 		/// <para>ID: cc7f2327-2297-43e4-9859-9f643dad125a</para>	
 		/// </summary>
-        [SitecoreField(FieldName = IHeroBannerConstants.Summary_FieldName)]
+        [SitecoreField(IHeroBannerConstants.Summary_FieldId, SitecoreFieldType.MultiLineText, "Banner")]
         public virtual string Summary { get; set; }/// <summary>
 		/// Represents Title field
 		/// <para>Path: /sitecore/templates/Feature/PageContent/_HeroBanner/Banner/Title</para>	
 		/// <para>ID: 4ce0eeb2-7177-4459-ba10-3b05e046c176</para>	
 		/// </summary>
-        [SitecoreField(FieldName = IHeroBannerConstants.Title_FieldName)]
+        [SitecoreField(IHeroBannerConstants.Title_FieldId, SitecoreFieldType.SingleLineText, "Banner")]
         public virtual string Title { get; set; }
 	}
 
@@ -113,14 +116,14 @@ namespace Sitecore.Feature.PageContent.Models
 		/// <para>ID: 0e3b4dcf-875c-4497-b71f-23989a7fad7d</para>	
         /// <para>Section: Title and Text</para>
 		/// </summary>
-        [SitecoreField(FieldName = ITitleTextComponentConstants.Text_FieldName)]
+        [SitecoreField(ITitleTextComponentConstants.Text_FieldId, SitecoreFieldType.RichText, "Title and Text")]
         string Text { get; set; }/// <summary>
 		/// Represents Title field
 		/// <para>Field Type: Single-Line Text</para>	
 		/// <para>ID: 9abe4302-6a56-4d94-b0f4-15488f765b4a</para>	
         /// <para>Section: Title and Text</para>
 		/// </summary>
-        [SitecoreField(FieldName = ITitleTextComponentConstants.Title_FieldName)]
+        [SitecoreField(ITitleTextComponentConstants.Title_FieldId, SitecoreFieldType.SingleLineText, "Title and Text")]
         string Title { get; set; }
 	}
 	
@@ -130,9 +133,11 @@ namespace Sitecore.Feature.PageContent.Models
 		public static readonly ID TemplateId = new ID(TemplateIdString);
 		public const string TemplateName = "TitleTextComponent";
 		
-        public static readonly ID Text_FieldId = new ID("0e3b4dcf-875c-4497-b71f-23989a7fad7d");
+        public static readonly ID Text = new ID("0e3b4dcf-875c-4497-b71f-23989a7fad7d");
+        public const string Text_FieldId = "0e3b4dcf-875c-4497-b71f-23989a7fad7d";
         public const string Text_FieldName = "Text";
-        public static readonly ID Title_FieldId = new ID("9abe4302-6a56-4d94-b0f4-15488f765b4a");
+        public static readonly ID Title = new ID("9abe4302-6a56-4d94-b0f4-15488f765b4a");
+        public const string Title_FieldId = "9abe4302-6a56-4d94-b0f4-15488f765b4a";
         public const string Title_FieldName = "Title";
 	}
 	
@@ -148,13 +153,13 @@ namespace Sitecore.Feature.PageContent.Models
 		/// <para>Path: /sitecore/templates/Feature/PageContent/_TitleTextComponent/Title and Text/Text</para>	
 		/// <para>ID: 0e3b4dcf-875c-4497-b71f-23989a7fad7d</para>	
 		/// </summary>
-        [SitecoreField(FieldName = ITitleTextComponentConstants.Text_FieldName)]
+        [SitecoreField(ITitleTextComponentConstants.Text_FieldId, SitecoreFieldType.RichText, "Title and Text")]
         public virtual string Text { get; set; }/// <summary>
 		/// Represents Title field
 		/// <para>Path: /sitecore/templates/Feature/PageContent/_TitleTextComponent/Title and Text/Title</para>	
 		/// <para>ID: 9abe4302-6a56-4d94-b0f4-15488f765b4a</para>	
 		/// </summary>
-        [SitecoreField(FieldName = ITitleTextComponentConstants.Title_FieldName)]
+        [SitecoreField(ITitleTextComponentConstants.Title_FieldId, SitecoreFieldType.SingleLineText, "Title and Text")]
         public virtual string Title { get; set; }
 	}
 
