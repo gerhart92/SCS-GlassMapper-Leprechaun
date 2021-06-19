@@ -1,0 +1,26 @@
+﻿@model Sitecore.Feature.Hubspot.ShareViewModel
+@{
+    var eventsAdded = Model.PageItem.GetEvents(EventTypes.SocialShare);
+}
+
+<section class="social-share-component">
+    <h2 class="title">Follow Us</h2>
+    <ul class="share-icons">
+        @foreach (var link in Model.Links)
+        {
+            <li><a class="share__icon" href="@link.Url" onclick="SocialEvent()"><img src="@link.Icon" /></a></li>
+        }
+    </ul>
+</section>
+@if (eventsAdded != null && eventsAdded.Count > 0)
+{
+    <script>
+        function SocialEvent() {
+          @foreach(var e in eventsAdded)
+		  {
+			@: _hsq.push(["trackCustomBehavioralEvent", { name: '@e' }]);
+		  }
+		  javascript:window.open(el.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+        }
+    </script>
+}

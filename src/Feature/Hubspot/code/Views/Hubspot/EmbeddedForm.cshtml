@@ -1,0 +1,44 @@
+﻿@using Sitecore.Globalization;
+@using Sitecore.Feature.Hubspot
+@using Sitecore.Foundation.Extensions.Helpers
+
+@model Sitecore.Feature.Hubspot.Models.HubspotSettingsModel
+
+@if (Model == null)
+{
+  return;
+}
+
+@if (!string.IsNullOrEmpty(Model.HubspotFormId))
+{
+<section class="hubspot-form-container">
+    <div class="wrapper">
+        <script>
+            hbspt.forms.create({
+                portalId: "@Model.HubspotPortalId",
+                formId: "@Model.HubspotFormId",
+                target: "#embeddedForm",
+                onFormSubmit: function ($form) {
+                    // Serialize the form data.
+                    var data = { formBody: $form.serialize() };
+                    // Submit the form using AJAX.
+                    $.ajax({
+                        type: 'POST',
+                        contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                        url: "/api/Hubspot/SaveForm",
+                        data: data
+                    })
+                }
+            });
+        </script>
+    </div>
+</section>
+
+}
+else
+{
+  if (Sitecore.Context.PageMode.IsExperienceEditor)
+  {
+<div>Configure your hubspot form!</div>
+  }
+}

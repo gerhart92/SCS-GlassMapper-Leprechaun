@@ -1,0 +1,18 @@
+﻿@using Sitecore.Foundation.Indexing.Helpers
+@using Sitecore.Foundation.Indexing.Models
+@model Sitecore.Mvc.Presentation.RenderingModel
+@if (Model != null)
+{
+  if (!Sitecore.Context.PageMode.IsExperienceEditor)
+  {
+    var eventsAdded = Model.Item.GetEvents(EventTypes.PageLoad);
+    foreach (var e in eventsAdded)
+    {
+      <script>
+          _hsq.push(["trackEvent", {
+            id: '@e'
+          }]);
+      </script>
+    }
+  }
+}

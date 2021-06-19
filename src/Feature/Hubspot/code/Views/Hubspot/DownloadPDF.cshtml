@@ -1,0 +1,48 @@
+﻿@using Sitecore.Globalization;
+@using Sitecore.Feature.Hubspot
+@model Sitecore.Feature.Hubspot.Models.HubspotSettingsModel
+
+@if (Model != null)
+{
+    var pageItem = Sitecore.Context.Item;
+    var eventsAdded = pageItem.GetEvents(EventTypes.DownloadPDF);
+<script>
+        function downloadArticle() {
+            @if (!Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                foreach (var e in eventsAdded)
+                {
+                    @: _hsq.push(["trackCustomBehavioralEvent", { name: '@e' }]);
+                }
+            }
+            var articleId = {articleId : '@Model.ContextItemId'};
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", '/api/Hubspot/DownloadPDFDocument', true);
+
+            //Send the proper header information along with the request
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.setRequestHeader("Accept", "application/json");
+
+            xhr.onreadystatechange = function() { // Call a function when the state changes.
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            // Request finished. Do processing here.
+            window.location.href = xhr.responseText;
+            }
+        }
+        xhr.send(JSON.stringify(articleId))
+        document.getElementById('infoPopup').style.display = 'none';
+        }
+</script>
+    <div class="wrapper">
+        <div class="container">
+            <a class="btn-primary" onclick="downloadArticle()">Download PDF Document</a>
+        </div>
+    </div>
+}
+else
+{
+  if (Sitecore.Context.PageMode.IsExperienceEditor)
+  {
+    <div>Configure your hubspot form!</div>
+  }
+}

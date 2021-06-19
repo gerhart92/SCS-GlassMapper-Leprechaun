@@ -1,0 +1,48 @@
+{
+  "Name": "HubspotScoreFacetModel",
+  "Version": "1.0",
+  "References": [
+    {
+      "Name": "XConnect",
+      "Version": "1.0"
+    },
+    {
+      "Name": "Sitecore.XConnect.Collection.Model",
+      "Version": "9.0"
+    }
+  ],
+  "Types": {
+    "Sitecore.Feature.Hubspot.Models.ScoreFacet": {
+      "Type": "Facet",
+      "BaseType": "Sitecore.XConnect.Facet",
+      "ClrType": "Sitecore.Feature.Hubspot.Models.ScoreFacet, Sitecore.Feature.Hubspot, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {
+        "HubspotScore": {
+          "Type": "Int32"
+        }
+      }
+    },
+    "Sitecore.Feature.Hubspot.Models.ScoreNameFacet": {
+      "Type": "Facet",
+      "BaseType": "Sitecore.XConnect.Facet",
+      "ClrType": "Sitecore.Feature.Hubspot.Models.ScoreNameFacet, Sitecore.Feature.Hubspot, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {
+        "HubspotScoreName": {
+          "Type": "String"
+        }
+      }
+    }
+  },
+  "Facets": [
+    {
+      "Target": "Contact",
+      "Name": "HubspotScore",
+      "Type": "Sitecore.Feature.Hubspot.Models.ScoreFacet"
+    },
+    {
+      "Target": "Contact",
+      "Name": "HubspotScoreName",
+      "Type": "Sitecore.Feature.Hubspot.Models.ScoreNameFacet"
+    }
+  ]
+}
