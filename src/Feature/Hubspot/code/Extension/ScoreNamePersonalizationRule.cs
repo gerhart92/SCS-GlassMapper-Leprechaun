@@ -44,7 +44,7 @@
             var hubspotConfigItemId = Sitecore.Configuration.Settings.GetSetting(ConfigItemId);
             if (string.IsNullOrEmpty(hubspotConfigItemId))
             {
-              hubspotConfigItemId = "{1F0F4461-60CB-4132-94DB-5C93E185FDA8}";
+              hubspotConfigItemId = "";
             }
 
             var hubspotConfigItem = Sitecore.Context.Database.GetItem(hubspotConfigItemId);
