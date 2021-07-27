@@ -1,0 +1,49 @@
+﻿---
+ID: "e9a0ab44-ef19-4579-8b6e-d674a59f40a1"
+Parent: "f6116045-bd61-4186-a501-b2259ea81899"
+Template: "aa697a95-4189-4015-8a0b-da76d6a83589"
+Path: /sitecore/client/Applications/FormsBuilder/Components/Layouts/Actions/Send Email/PageSettings/ItemTreeView
+SharedFields:
+- ID: "0cc7f24b-2013-46c6-8ae3-5233d094ff7c"
+  Hint: StaticData
+  Value: "{B8C0FAC4-0697-44B4-B12A-5A6E7A7EADA0}"
+- ID: "4cec56f0-9fe2-4980-8085-62b0a0ab51ec"
+  Hint: Database
+  Value: $context_contentdatabase
+- ID: "9e60ad66-4858-4952-97ca-5d67e457cf3f"
+  Hint: SelectedItem
+  Value: 
+- ID: "a105bd19-85b3-4681-88a9-dbcb402f6f6d"
+  Hint: SelectedItemId
+  Value: 
+- ID: "e0f5c2e5-ea32-4463-aef5-925d4194b4a2"
+  Hint: IsCheckModeEnabled
+  Value: 
+- ID: "e46cf3aa-5ad6-4a61-ad2b-d9d5d6698b7d"
+  Hint: CheckMode
+  Value: Single
+- ID: "f2a83648-50d1-44b3-bea0-0f6124bf211c"
+  Hint: ShowHiddenItems
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170404T103808Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bc933915-ffe0-4a96-b045-667037b0f002"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210727T192220Z

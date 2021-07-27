@@ -1,5 +1,5 @@
 {
-    "namespace": "Sitecore.Foundation.SitecoreForm",
+    "namespace": "Sitecore.Foundation.SitecoreForms",
     "items": {
         "includes": [
             {
@@ -28,11 +28,5 @@
                 "allowedPushOperations": "CreateOnly"
             }
         ]
-    },
-    "leprechaun": {
-        "configuration": {
-            "@extends": "Sitecore.Foundation.ORM",
-            "@name": "Foundation.SitecoreForm"
-        }
     }
 }
