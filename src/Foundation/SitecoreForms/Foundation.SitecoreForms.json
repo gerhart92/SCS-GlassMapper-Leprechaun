@@ -1,0 +1,38 @@
+{
+    "namespace": "Sitecore.Foundation.SitecoreForm",
+    "items": {
+        "includes": [
+            {
+                "name": "master/sitecore/templates/Foundation",
+                "path": "/sitecore/templates/Foundation/SitecoreForms",
+                "scope": "ItemAndDescendants",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "master/sitecore/system/Settings/Forms/E-mail Templates",
+                "path": "/sitecore/system/Settings/Forms/E-mail Templates",
+                "scope": "SingleItem",
+                "allowedPushOperations": "CreateOnly"
+            },
+            {
+                "name": "master/sitecore/system/Settings/Forms/Submit Actions",
+                "path": "/sitecore/system/Settings/Forms/Submit Actions/Send Email",
+                "scope": "SingleItem",
+                "allowedPushOperations": "CreateOnly"
+            },
+            {
+                "name": "core/sitecore/client/Applications/FormsBuilder/Components/Layouts/Actions",
+                "path": "/sitecore/client/Applications/FormsBuilder/Components/Layouts/Actions/Send Email",
+                "scope": "ItemAndDescendants",
+                "database": "core",
+                "allowedPushOperations": "CreateOnly"
+            }
+        ]
+    },
+    "leprechaun": {
+        "configuration": {
+            "@extends": "Sitecore.Foundation.ORM",
+            "@name": "Foundation.SitecoreForm"
+        }
+    }
+}
