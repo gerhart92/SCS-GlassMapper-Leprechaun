@@ -3,6 +3,8 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Sitecore.Data;
+    using Sitecore.Data.Fields;
     using Sitecore.Data.Items;
     using Sitecore.Feature.Hubspot.Models;
 
@@ -47,6 +49,13 @@
                     }
                 }
             }
+
+            return eventsAdded;
+        }
+
+        public static IEnumerable<Item> GetMultiListValueItems(this Item item, ID fieldId)
+        {
+            return new MultilistField(item.Fields[fieldId]).GetItems();
         }
     }
 }

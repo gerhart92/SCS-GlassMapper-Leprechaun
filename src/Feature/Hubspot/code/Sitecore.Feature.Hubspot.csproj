@@ -105,7 +105,6 @@
     <PackageReference Include="Sitecore.Logging.Client" Version="10.0.0" />
     <PackageReference Include="Sitecore.Nexus.Consumption" Version="1.1.0" />
     <PackageReference Include="Sitecore.Nexus.Licensing" Version="2.0.6" />
-    <PackageReference Include="Sitecore.NVelocity" Version="10.0.0" />
     <PackageReference Include="Sitecore.XConnect" Version="10.0.0" />
     <PackageReference Include="Sitecore.XConnect.Client" Version="10.0.0" />
     <PackageReference Include="Sitecore.XConnect.Client.Configuration" Version="10.0.0" />

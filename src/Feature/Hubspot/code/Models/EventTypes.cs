@@ -1,10 +1,12 @@
 ﻿namespace Sitecore.Feature.Hubspot.Models
 {
-  public enum EventTypes
-  {
-    PageLoad,
-    DownloadPdf,
-    SocialShare,
-    CTALink
-  }
+    public enum EventTypes
+    {
+        PageLoad,
+        DownloadPdf,
+        SocialShare,
+        CTALink,
+        CTA,
+        PdfDownload
+    }
 }

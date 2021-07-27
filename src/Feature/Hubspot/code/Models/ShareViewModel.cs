@@ -3,6 +3,6 @@
     using System.Collections.Generic;
     public class ShareViewModel
     {
-        public List<SocialLink> SocialLinks { get; set}
+        public List<SocialLink> SocialLinks { get; set; }
     }
 }
