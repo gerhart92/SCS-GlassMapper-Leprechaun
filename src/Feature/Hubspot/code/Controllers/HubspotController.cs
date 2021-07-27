@@ -28,7 +28,7 @@
 
     protected static readonly string ConfigItemId = "Hubspot.ConfigItemId";
 
-    public ActionResult RFPForm()
+    public ActionResult Form()
     {
       var dataSourceId = RenderingContext.CurrentOrNull.Rendering.DataSource;
       var dataSource = Sitecore.Context.Database.Items.GetItem(dataSourceId);
