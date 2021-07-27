@@ -1,11 +1,17 @@
-﻿using Sitecore.Mvc.Presentation;
-
-namespace Sitecore.Feature.Hubspot.Models
+﻿namespace Sitecore.Feature.Hubspot.Models
 {
-  public class HubspotSettingsModel
-  {
-    public Rendering Rendering { get; set; }
+    using Sitecore.Mvc.Presentation;
 
-    public string ContextItemId { get; set; }
-  }
+    public class HubspotSettingsModel
+    {
+        public Rendering Rendering { get; set; }
+
+        public string HubspotPortalId { get; set; }
+
+        public string HubspotFormId { get; set; }
+
+        public string HubspotFormApi { get; set; }
+
+        public string ContextItemId { get; set; }
+    }
 }
