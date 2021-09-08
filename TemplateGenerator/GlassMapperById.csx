@@ -44,7 +44,7 @@ namespace {template.Namespace}
     /// <summary>
 	/// I{template.CodeName} interface generated based on sitecore item
 	/// <para>Path: {template.Path}</para>	
-	/// <para>ID: {template.Id}</para>	
+	/// <para>ID: {{{template.Id}}}</para>	
 	/// </summary>
 	[SitecoreType(TemplateId = I{template.CodeName}Constants.TemplateIdString)]
 	[GeneratedCode(""Leprechaun"", ""2.0.0.0"")]
@@ -55,7 +55,7 @@ namespace {template.Namespace}
 	
 	public static partial class I{template.CodeName}Constants
 	{{
-		public const string TemplateIdString = ""{template.Id}"";
+		public const string TemplateIdString = ""{{{template.Id}}}"";
 		public static readonly ID TemplateId = new ID(TemplateIdString);
 		public const string TemplateName = ""{template.CodeName}"";
 		{ RenderConstantFields(template) }
@@ -292,8 +292,8 @@ public string RenderConstantFields(TemplateCodeGenerationMetadata template)
     foreach (var field in template.OwnFields)
     {
         localCode.Append($@"
-        public static readonly ID {field.CodeName} = new ID(""{field.Id}"");
-        public const string {field.CodeName}_FieldId = ""{field.Id}"";
+        public static readonly ID {field.CodeName} = new ID(""{{{field.Id}}}"");
+        public const string {field.CodeName}_FieldId = ""{{{field.Id}}}"";
         public const string {field.CodeName}_FieldName = ""{field.Name}"";");
     }
 

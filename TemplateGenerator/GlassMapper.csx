@@ -44,7 +44,7 @@ namespace {template.Namespace}
     /// <summary>
 	/// I{template.CodeName} interface generated based on sitecore item
 	/// <para>Path: {template.Path}</para>	
-	/// <para>ID: {template.Id}</para>	
+	/// <para>ID: {{{template.Id}}}</para>	
 	/// </summary>
 	[SitecoreType(TemplateId = I{template.CodeName}Constants.TemplateIdString)]
 	[GeneratedCode(""Leprechaun"", ""2.0.0.0"")]
@@ -55,7 +55,7 @@ namespace {template.Namespace}
 	
 	public static partial class I{template.CodeName}Constants
 	{{
-		public const string TemplateIdString = ""{template.Id}"";
+		public const string TemplateIdString = ""{{{template.Id}}}"";
 		public static readonly ID TemplateId = new ID(TemplateIdString);
 		public const string TemplateName = ""{template.CodeName}"";
 		{ RenderConstantFields(template) }
@@ -64,7 +64,7 @@ namespace {template.Namespace}
 	/// <summary>
 	/// {template.CodeName} class generated based on sitecore item	
 	/// <para>Path: {template.Path}</para>	
-	/// <para>ID: {template.Id}</para>	
+	/// <para>ID: {{{template.Id}}}</para>	
 	/// </summary>
 	public partial class {template.CodeName} : {GetBaseClasses(template)}, I{template.CodeName}
 	{{
@@ -123,7 +123,7 @@ public string RenderInterfaceFields(TemplateCodeGenerationMetadata template)
         localCode.Append($@"/// <summary>
 		/// Represents {field.Name} field
 		/// <para>Field Type: {field.Type}</para>	
-		/// <para>ID: {field.Id}</para>	
+		/// <para>ID: {{{field.Id}}}</para>	
         /// <para>Section: {field.Section}</para>
 		/// </summary>
         [SitecoreField(FieldName = I{template.CodeName}Constants.{field.CodeName}_FieldName)]
@@ -142,7 +142,7 @@ public string RenderClassFields(TemplateCodeGenerationMetadata template)
         localCode.Append($@"/// <summary>
 		/// Represents {field.Name} field
 		/// <para>Path: {field.Path}</para>	
-		/// <para>ID: {field.Id}</para>	
+		/// <para>ID: {{{field.Id}}}</para>	
 		/// </summary>
         [SitecoreField(FieldName = I{template.CodeName}Constants.{field.CodeName}_FieldName)]
         public virtual {GetFieldType(field)} {field.CodeName} {{ get; set; }}");
@@ -232,7 +232,7 @@ public string RenderConstantFields(TemplateCodeGenerationMetadata template)
     foreach (var field in template.OwnFields)
     {
         localCode.Append($@"
-        public static readonly ID {field.CodeName}_FieldId = new ID(""{field.Id}"");
+        public static readonly ID {field.CodeName}_FieldId = new ID(""{{{field.Id}}}"");
         public const string {field.CodeName}_FieldName = ""{field.Name}"";");
     }
 
