@@ -15,7 +15,7 @@
                 "allowedPushOperations": "CreateOnly"
             },
 			{
-				"name" : "master/sitecore/templates/Feature/Media",
+				"name" : "HelixTemplates",
 				"path" : "/sitecore/templates/Feature/Media",
 				"scope": "ItemAndDescendants",
 				"allowedPushOperations": "CreateUpdateAndDelete"			

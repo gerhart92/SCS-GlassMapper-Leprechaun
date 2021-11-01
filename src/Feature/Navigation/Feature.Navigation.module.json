@@ -3,7 +3,7 @@
 	"items": {
 	   "includes": [
 			{
-				"name" : "master/sitecore/templates/Feature",
+				"name" : "HelixTemplates",
 				"path" : "/sitecore/templates/Feature/Navigation",
 				"scope": "ItemAndDescendants",
 				"allowedPushOperations": "CreateUpdateAndDelete"			

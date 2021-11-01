@@ -15,7 +15,7 @@
                 "allowedPushOperations": "CreateOnly"
             },
             {
-                "name": "master/sitecore/templates/Foundation/Design",
+                "name": "HelixTemplates",
                 "path": "/sitecore/templates/Foundation/Design",
                 "scope": "ItemAndDescendants",
                 "allowedPushOperations": "CreateUpdateAndDelete"

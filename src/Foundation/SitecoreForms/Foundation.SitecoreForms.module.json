@@ -3,7 +3,7 @@
     "items": {
         "includes": [
             {
-                "name": "master/sitecore/templates/Foundation",
+                "name": "HelixTemplates",
                 "path": "/sitecore/templates/Foundation/SitecoreForms",
                 "scope": "ItemAndDescendants",
                 "allowedPushOperations": "CreateUpdateAndDelete"
